@@ -1,0 +1,330 @@
+:root {
+	/* Colors */
+	--clr-strongCyan: hsl(172, 67%, 45%);
+
+	--clr-veryDarkCyan: hsl(183, 100%, 15%);
+	--clr-darkGrayishCyan: hsl(186, 14%, 43%);
+	--clr-grayishCyan: hsl(184, 14%, 56%);
+	--clr-lightGrayishCyan: hsl(185, 41%, 84%);
+	--clr-veryLightGrayishCyan: hsl(189, 41%, 97%);
+	--clr-white: hsl(0, 0%, 100%);
+
+	/* Fonts */
+	--ff-spaceMono: "Space Mono", monospace;
+
+	--fw-700: 700;
+
+	--fs-formInputs: 24px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--ff-spaceMono);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: var(--clr-lightGrayishCyan);
+}
+
+header {
+	margin-bottom: 1rem;
+}
+
+main .card {
+	display: flex;
+	max-width: 850px;
+	height: 450px;
+	background-color: var(--clr-white);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 1rem;
+	padding: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+	.card {
+		display: flex;
+		flex-direction: column;
+		min-height: 750px;
+	}
+}
+
+main .card-body {
+	width: 50%;
+	margin: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+	.card-body {
+		display: flex;
+		min-width: 100%;
+	}
+}
+
+.bill-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin-bottom: 2rem;
+}
+
+.bill-container > label {
+	font-weight: var(--fw-700);
+	margin-bottom: -0.5rem;
+}
+
+.bill-container > svg {
+	position: relative;
+	top: 28px;
+	bottom: 0;
+	left: 0;
+	margin-left: 0.5rem;
+}
+
+.bill-container > .bill-input {
+	font-family: var(--ff-spaceMono);
+	font-size: var(--fs-formInputs);
+	direction: rtl;
+	height: auto;
+	padding-right: 0.5rem;
+	border-radius: 0.3rem;
+	border: none;
+	color: var(--clr-veryDarkCyan);
+	background-color: var(--clr-veryLightGrayishCyan);
+	font-weight: var(--fw-700);
+	margin: 2px;
+}
+
+@media screen and (max-width: 375px) {
+	.bill-container > .bill-input {
+		margin-right: 1.5rem;
+	}
+}
+
+.bill-input:focus {
+	outline: none;
+	border: 2px solid var(--clr-strongCyan);
+	margin: 0;
+}
+
+.tip-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+.tip-container label {
+	font-weight: var(--fw-700);
+	margin-bottom: 1rem;
+}
+
+.tip-container input[type="button"] {
+	width: 30%;
+	height: 2.7rem;
+	font-weight: var(--fw-700);
+	margin-bottom: 1rem;
+	margin-right: 0.3rem;
+	font-size: var(--fs-formInputs);
+	color: var(--clr-white);
+	background-color: var(--clr-veryDarkCyan);
+	font-family: var(--ff-spaceMono);
+	border: none;
+	border-radius: 0.3rem;
+}
+
+.tip-container input[type="button"]:hover {
+	background-color: hsl(172, 67%, 70%);
+	color: var(--clr-veryDarkCyan);
+	cursor: pointer;
+}
+
+.tip-container input[type="button"]:active {
+	background-color: hsl(172, 67%, 70%);
+	color: var(--clr-veryDarkCyan);
+	cursor: pointer;
+}
+
+.tip-container input[type="button"].active {
+	background-color: hsl(172, 67%, 70%);
+	color: var(--clr-veryDarkCyan);
+}
+
+.tip-container input[type="text"] {
+	width: 30%;
+	height: 2.7rem;
+	margin-bottom: 1rem;
+	font-weight: var(--fw-700);
+	font-size: var(--fs-formInputs);
+	font-family: var(--ff-spaceMono);
+	direction: rtl;
+	border: none;
+	border-radius: 0.3rem;
+	background-color: var(--clr-veryLightGrayishCyan);
+	padding-right: 0.5rem;
+	color: var(--clr-veryDarkCyan);
+}
+
+.tip-container input[type="text"]::placeholder {
+	text-align: center;
+}
+
+.tip-container input[type="text"]:focus {
+	outline: none;
+	border: 2px solid var(--clr-strongCyan);
+}
+
+.people-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin-bottom: 2rem;
+}
+
+.people-container label {
+	font-weight: var(--fw-700);
+	margin-bottom: -0.5rem;
+}
+
+.people-container span {
+	color: red;
+	margin-left: 4.5rem;
+	font-weight: normal;
+}
+
+.people-container > svg {
+	position: relative;
+	top: 28px;
+	bottom: 0;
+	left: 0;
+	margin-left: 0.5rem;
+}
+
+.people-container > .people-input {
+	font-family: var(--ff-spaceMono);
+	font-size: var(--fs-formInputs);
+	direction: rtl;
+	height: auto;
+	padding-right: 0.5rem;
+	border-radius: 0.3rem;
+	border: none;
+	color: var(--clr-veryDarkCyan);
+	background-color: var(--clr-veryLightGrayishCyan);
+	font-weight: var(--fw-700);
+	margin: 2px;
+}
+
+@media screen and (max-width: 375px) {
+	.people-container > .people-input {
+		margin-right: 1.5rem;
+	}
+}
+
+.people-input:focus {
+	outline: none;
+	border: 2px solid var(--clr-strongCyan);
+	margin: 0;
+}
+
+label {
+	color: var(--clr-darkGrayishCyan);
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: auto;
+	background-color: var(--clr-veryDarkCyan);
+	color: var(--clr-white);
+	border-radius: 1rem;
+	line-height: 1rem;
+	padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+	.wrapper {
+		width: 100%;
+		margin-inline: 1rem;
+	}
+}
+
+.wrapper .first {
+	display: flex;
+	align-items: center;
+	margin-inline: 2rem;
+}
+
+.wrapper .first p {
+	font-size: 0.8rem;
+	font-weight: var(--fw-700);
+}
+
+.wrapper .first span {
+	display: block;
+	color: hsl(184, 14%, 56%);
+	font-size: 0.7rem;
+}
+
+.wrapper .first > h2 {
+	margin-left: auto;
+	font-size: 2.6rem;
+	color: var(--clr-strongCyan);
+}
+
+.wrapper .second {
+	display: flex;
+	align-items: center;
+	margin-inline: 2rem;
+}
+
+.wrapper .second p {
+	font-size: 0.8rem;
+	font-weight: var(--fw-700);
+}
+
+.wrapper .second span {
+	display: block;
+	color: hsl(184, 14%, 56%);
+	font-size: 0.7rem;
+}
+
+.wrapper .second h2 {
+	margin-left: auto;
+	font-size: 2.6rem;
+	color: var(--clr-strongCyan);
+}
+
+.wrapper button {
+	color: var(--clr-veryDarkCyan);
+	margin-top: auto;
+	margin-bottom: 2rem;
+	margin-inline: 2rem;
+	height: 2.5rem;
+	border-radius: 0.2rem;
+	border: none;
+	background-color: var(--clr-strongCyan);
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	font-weight: var(--fw-700);
+	font-family: var(--ff-spaceMono);
+}
+
+.wrapper button:hover {
+	cursor: pointer;
+	background-color: hsl(172, 67%, 75%);
+}
